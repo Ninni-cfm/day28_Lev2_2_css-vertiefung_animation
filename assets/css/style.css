@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    --ballSize: 15vmin;
+}
+
+div {
+    height: var(--ballSize);
+    width: var(--ballSize);
+    background-color: blue;
+    border-radius: calc(var(--ballSize) / 2);
+    animation: movingBall 5s ease infinite;
+}
+
+div:hover {
+    animation-play-state: paused;
+}
+
+@keyframes movingBall {
+    0%,
+    100% {
+        background-color: red;
+        transform: translate(0vmin, 0vmin);
+    }
+
+    25% {
+        background-color: yellow;
+        transform: translate(calc(100vw - var(--ballSize)), 0vmin);
+    }
+
+    50% {
+        background-color: green;
+        transform: translate(
+            calc(100vw - var(--ballSize)),
+            calc(100vh - var(--ballSize))
+        );
+    }
+
+    75% {
+        background-color: blue;
+        transform: translate(0vmin, calc(100vh - var(--ballSize)));
+    }
+}
