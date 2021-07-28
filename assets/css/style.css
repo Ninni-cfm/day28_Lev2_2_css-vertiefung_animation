@@ -10,7 +10,6 @@ html {
 div {
     height: var(--ballSize);
     width: var(--ballSize);
-    background-color: blue;
     border-radius: calc(var(--ballSize) / 2);
     animation: movingBall 5s ease infinite;
 }
